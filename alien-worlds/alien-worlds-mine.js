@@ -27,22 +27,22 @@ setInterval(mineTLM, REPEAT_INTERVAL);
 
 // Utility function
 function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // Main script logic
 async function mineTLM() {
-  try {
-    if (mineButton[0].textContent === 'Mine') {
-      mineButton[0].click();
-    }
+    try {
+        if (mineButton[0].textContent === 'Mine') {
+            mineButton[0].click();
+        }
 
-    await sleep(SLEEP_TIME);
+        await sleep(SLEEP_TIME);
 
-    if (submitButton[0].textContent === 'Submit') {
-      submitButton[0].click();
+        if (submitButton[0].textContent === 'Submit') {
+            submitButton[0].click();
+        }
+    } catch {
+        console.error('An error occurred:', error);
     }
-  } catch {
-    console.error('An error occurred:', error);
-  }
 }
