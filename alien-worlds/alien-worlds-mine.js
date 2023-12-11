@@ -42,7 +42,7 @@ async function mineTLM() {
         if (submitButton[0].textContent === 'Submit') {
             submitButton[0].click();
         }
-    } catch {
+    } catch (error) {
         console.error('An error occurred:', error);
     }
 }
